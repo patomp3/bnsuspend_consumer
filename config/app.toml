@@ -1,0 +1,32 @@
+# Application config file.
+
+appName = "TVS_Collection_Consumer"
+env = "DEV-UAT62"
+
+[development]
+DBICC = "UAT62"
+DBATB2 = "QED"
+DBPED = "QED"
+queueurl = "amqp://admin:admin@172.19.218.104:5672/"
+queuename = "tvs_suspendsub"
+ordersuspendurl = "http://172.19.188.7:8989/Services/SubmitOrder/EndpointHttp"
+updateorderurl = "http://wfacore-uat2.icc.arctic.true.th/updateorder"
+writehistoryurl = "http://172.22.203.68/ConvergenceIBSWCF4/ICC/writehistory"
+historyuser = "58147"
+historyevent = "210"
+historyreason = "4655" 
+#historyreason = "4956"
+
+
+[production]
+DBICC = "SIT62"
+DBATB2 = "QED"
+DBPED = "QED"
+queueurl = "amqp://admin:admin@172.19.218.104:5672/"
+queuename = "tvs_suspendsub"
+ordersuspendurl = "http://172.19.188.7:8989/Services/SubmitOrder/EndpointHttp"
+updateorderurl = "http://localhost:8000/updateorder"
+writehistoryurl = "http://172.22.203.68/ConvergenceIBSTVG/ICC/writehistory"
+historyuser = "81090"
+historyevent = "210"
+historyreason = "4956"  
