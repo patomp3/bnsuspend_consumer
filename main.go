@@ -76,6 +76,17 @@ func main() {
 	q.Receive(ch)
 
 	/*notifyStatus := ""
+	orderReq := OrderRequest{"108148316", "28076685-a2ef-3d2f-dcd1-93b93b5352b1"}
+	orderRes := orderReq.SubmitOrder(124)
+	if orderRes.OMXTrackingID != "" {
+		notifyStatus = "Z"
+	} else {
+		notifyStatus = "E"
+	}
+	log.Printf("Notify Result %s", notifyStatus)
+	log.Printf("Response %v", orderRes)*/
+
+	/*notifyStatus := ""
 	orderRes := SubmitOrder("130003241", 124, "11111")
 	if orderRes.OMXTrackingID != "" {
 		notifyStatus = "Z"
